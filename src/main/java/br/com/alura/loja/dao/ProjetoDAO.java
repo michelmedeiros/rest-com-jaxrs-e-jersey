@@ -3,7 +3,9 @@ package br.com.alura.loja.dao;
 import br.com.alura.loja.modelo.Projeto;
 import com.thoughtworks.xstream.XStream;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -29,6 +31,12 @@ public class ProjetoDAO {
     public Projeto busca(Long id) {
         return banco.get(id);
     }
+
+
+    public List<Projeto> busca() {
+        return Arrays.asList(banco.get(1));
+    }
+
 
     public Projeto remove(long id) {
         return banco.remove(id);
